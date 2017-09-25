@@ -1,0 +1,26 @@
+.barra{
+  position: fixed;
+  top: 0;
+	left: 0;
+	right: 0;
+  z-index: 1000;
+}
+.top{
+  margin-top: 50px;
+}
+
+.gris{
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+}
+
+.gris:hover{
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+}
