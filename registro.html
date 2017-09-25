@@ -52,7 +52,7 @@
   <div class="container-fluid top">
     <div class="row">
       <form id="contacto" class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6" method="get">
-        <h2>Contactanos</h2>
+        <h2>Registrate</h2>
         <div class="form-group">
           <label>Correo Electronico:</label>
           <input name="correo" type="email" class="form-control" error="El campo Correo Electronico no es valido" id="emailReg" placeholder="usuario@email.com" required>
@@ -63,7 +63,7 @@
         </div>
         <div class="form-group">
           <label>Apellido:</label>
-          <input name="nombre" type="text" class="form-control" error="El campo Nombre no es valido" id="apelReg" placeholder="Torres" required>
+          <input name="apellido" type="text" class="form-control" error="El campo Nombre no es valido" id="apelReg" placeholder="Torres" required>
         </div>
         <div class="form-group">
           <label>Celular:</label>
@@ -71,7 +71,7 @@
         </div>
         <div class="form-group">
           <label>Estado:</label>
-          <select class="form-control" name="pais">
+          <select class="form-control" name="pais" id="estReg">
             <option value="ar">Aragua</option>
             <option value="ca">Caracas</option>
             <option value="zu">Zulia</option>
@@ -79,7 +79,7 @@
         </div>
         <div class="form-group">
           <label>Usuario:</label>
-          <input name="user" type="text" class="form-control" id="userReg" placeholder="usuario" required>
+          <input name="user" type="text" class="form-control" error="Usuario Existente" id="userReg" placeholder="usuario" required>
         </div>
         <div class="form-group">
           <label>Contraseña:</label>
@@ -130,7 +130,7 @@
 
     </div>
   </div>
-  <script type="text/javascript" src="js/registro.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/registro.js"></script>
 </body>
 </html>

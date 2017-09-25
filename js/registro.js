@@ -1,8 +1,12 @@
 var correo = document.querySelector('#emailReg');
 var nombre = document.querySelector('#nombReg');
 var numero = document.querySelector('#celReg');
+var apelli = document.querySelector('#apelReg');
+var estado = document.querySelector('#estReg');
 var boton = document.querySelector('#botonReg');
 var form = document.querySelector('#contacto');
+var userReg = document.querySelector('#userReg');
+var passReg = document.querySelector('#passReg');
 var valida = true;
 
 boton.addEventListener('click', function(event){
@@ -25,6 +29,18 @@ boton.addEventListener('click', function(event){
     validar(numero);
   }else {
     error(numero);
+  }
+  if (usuarios[userReg.value] === undefined) {
+    usuarios[userReg.value] = {};
+    usuarios[userReg.value]['correo'] = correo.value;
+    usuarios[userReg.value]['nombre'] = nombre.value;
+    usuarios[userReg.value]['apellido'] = apelli.value;
+    usuarios[userReg.value]['celular'] = numero.value;
+    usuarios[userReg.value]['estado'] = estado.value;
+    usuarios[userReg.value]['password'] = passReg.value;
+    localStorage.setItem("usuarios",JSON.stringify(usuarios));
+  }else{
+    error(userReg);
   }
 
   if (valida) {
