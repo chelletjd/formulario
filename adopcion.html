@@ -37,11 +37,11 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="adopcion.html">Pre-Formulario de Adopción</a></li>
+          <li class="activo"><a href="adopcion.html">Pre-Formulario de Adopción</a></li>
           <li><a href="contacto.html">Contactanos</a></li>
         </ul>
         <ul id="wel" class="nav navbar-nav navbar-right">
-          <li id="reg"  class="activo"><a href="registro.html">Registrate</a></li>
+          <li id="reg"><a href="registro.html">Registrate</a></li>
           <li id="ini"><a href="#" data-toggle="modal" data-target="#myModal">Iniciar Sesión</a></li>
         </ul>
       </div>
@@ -51,43 +51,29 @@
   </nav>
   <div class="container-fluid top">
     <div class="row">
-      <form id="registro" class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6" method="get">
-        <h2>Registrate</h2>
-        <div class="form-group">
-          <label>Correo Electronico:</label>
-          <input name="correo" type="email" class="form-control" error="El campo Correo Electronico no es valido" id="emailReg" placeholder="usuario@email.com" required>
-        </div>
+      <form id="adopcion" class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6" method="get">
+        <h2>Pre-Formulario de adopción</h2>
         <div class="form-group">
           <label>Nombre:</label>
-          <input name="nombre" type="text" class="form-control" error="El campo Nombre no es valido" id="nombReg" placeholder="Michelle" required>
+          <input name="nombre" type="text" class="form-control" error="El campo Nombre no es valido" id="nombPre" placeholder="Michelle" required>
         </div>
         <div class="form-group">
           <label>Apellido:</label>
-          <input name="apellido" type="text" class="form-control" error="El campo Apellido no es valido" id="apelReg" placeholder="Torres" required>
+          <input name="apellido" type="text" class="form-control" error="El campo Apellido no es valido" id="apelPre" placeholder="Torres" required>
+        </div>
+        <div class="form-group">
+          <label>Fecha de Nacimiento:</label>
+          <input name="fech" type="date" class="form-control" error="El campo Fecha de Nacimiento no puede estar vacio" id="fechPre" placeholder="01-01-1999" required>
+        </div>
+        <div class="form-group">
+          <label>Correo Electrónico:</label>
+          <input name="email" type="email" class="form-control" error="El campo Correo Electronico no es valido" id="emailPre" placeholder="usuario@ejemplo.com" required>
         </div>
         <div class="form-group">
           <label>Celular:</label>
-          <input name="cel" type="text" class="form-control" error="El campo Celular no es valido" id="celReg" placeholder="0414-1234567" required>
+          <input name="cel" type="text" class="form-control" error="El campo Celular no es valido" id="celPre" placeholder="0412-1234567" required>
         </div>
-        <div class="form-group">
-          <label>Estado:</label>
-          <select class="form-control" name="pais" id="estReg" error="Debe seleccionar un Estado">
-            <option value="">- Seleccione Estado-</option>
-            <option value="ar">Aragua</option>
-            <option value="ca">Caracas</option>
-            <option value="zu">Zulia</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Usuario:</label>
-          <input name="user" type="text" class="form-control" error="Usuario Existente" id="userReg" placeholder="usuario" required>
-        </div>
-        <div class="form-group">
-          <label>Contraseña:</label>
-          <input name="pass" type="password" class="form-control" error="La contraseña no debe estar vacia" id="passReg" placeholder="contaseña" required>
-        </div>
-
-        <button type="submit" id="botonReg" class="btn btn-primary">Enviar</button>
+        <button type="submit" id="botonPre" class="btn btn-primary">Enviar</button>
       </form>
     </div>
   </div>
@@ -124,6 +110,7 @@
     </div>
   </div>
   <script type="text/javascript" src="js/script.js"></script>
-  <script type="text/javascript" src="js/registro.js"></script>
+  <script type="text/javascript" src="js/adopcion.js"></script>
 </body>
+
 </html>

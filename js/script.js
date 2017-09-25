@@ -13,7 +13,7 @@ log.addEventListener('click', function(){
   console.log(user.value);
   console.log(pass.value);
   if (usuarios[user.value] !== undefined && usuarios[user.value].password == pass.value) {
-    window.alert('Bienvenido');
+    window.alert('Bienvenido, '+ user.value);
     $('#myModal').modal('hide');
     sessionStorage.setItem('user',user.value);
     sesion();

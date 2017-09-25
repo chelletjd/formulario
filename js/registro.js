@@ -4,7 +4,7 @@ var numero = document.querySelector('#celReg');
 var apelli = document.querySelector('#apelReg');
 var estado = document.querySelector('#estReg');
 var boton = document.querySelector('#botonReg');
-var form = document.querySelector('#contacto');
+var form = document.querySelector('#registro');
 var userReg = document.querySelector('#userReg');
 var passReg = document.querySelector('#passReg');
 var valida = true;
@@ -25,10 +25,25 @@ boton.addEventListener('click', function(event){
   }else{
     error(nombre);
   }
+  if (/[\w']+/.test(apelli.value)) {
+    validar(apelli);
+  }else{
+    error(apelli);
+  }
   if (/[\d]{4}[-][\d]{7}/.test(numero.value)) {
     validar(numero);
   }else {
     error(numero);
+  }
+  if(estReg.value == ""){
+    error(estReg);
+  }else{
+    validar(estReg)
+  }
+  if (passReg.value == "") {
+    error(passReg);
+  }else {
+    validar(passReg);
   }
   if (usuarios[userReg.value] === undefined) {
     usuarios[userReg.value] = {};
@@ -45,6 +60,7 @@ boton.addEventListener('click', function(event){
 
   if (valida) {
     form.submit();
+    window.alert('Usuario registrado de Forma Exitosa.');
   }
 });
 

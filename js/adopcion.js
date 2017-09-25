@@ -1,8 +1,10 @@
-var correo = document.querySelector('#emailCont');
-var nombre = document.querySelector('#nombCont');
-var numero = document.querySelector('#celCont');
-var botonCont = document.querySelector('#botonCont');
-var form = document.querySelector('#contacto');
+var correo = document.querySelector('#emailPre');
+var nombre = document.querySelector('#nombPre');
+var apell = document.querySelector('#apelPre')
+var numero = document.querySelector('#celPre');
+var fech = document.querySelector('#fechPre');
+var botonCont = document.querySelector('#botonPre');
+var form = document.querySelector('#adopcion');
 var valida = true;
 
 botonCont.addEventListener('click', function(event){
@@ -21,6 +23,16 @@ botonCont.addEventListener('click', function(event){
   }else{
     error(nombre);
   }
+  if (/[\w']+/.test(apell.value)) {
+    validar(apell);
+  }else{
+    error(apell);
+  }
+  if (fech.value == "") {
+    error(fech);
+  }else{
+    validar(fech);
+  }
   if (/[\d]{4}[-][\d]{7}/.test(numero.value)) {
     validar(numero);
   }else {
@@ -29,7 +41,7 @@ botonCont.addEventListener('click', function(event){
 
   if (valida) {
     form.submit();
-    window.alert('Mensaje Enviado, Gracias por su Tiempo.');
+    window.alert('Formulario de Adopción Enviado.');
   }
 });
 
