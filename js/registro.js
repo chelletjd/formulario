@@ -45,7 +45,7 @@ boton.addEventListener('click', function(event){
   }else {
     validar(passReg);
   }
-  if (usuarios[userReg.value] === undefined) {
+  if (usuarios[userReg.value] === undefined && valida) {
     usuarios[userReg.value] = {};
     usuarios[userReg.value]['correo'] = correo.value;
     usuarios[userReg.value]['nombre'] = nombre.value;
